@@ -1,8 +1,24 @@
 <html>
 <head>
 <noscript><meta http-equiv="refresh" content="0; url=https://qmetry.github.io/qaf" /></noscript>
-
+      <script type="text/javascript">
+         <!--
+            function redirect() {
+              var currLoc=window.location.href;
+              if(currLoc.indexOf('dist') !== -1){
+               setLoc(currLoc.replace('infostretch.github','qmetry.github'));
+              }else{
+                var newLoc=currLoc.replace('infostretch.github.io/qaf','qmetry.github.io/qaf/qaf-2.1.7b');
+                document.write("This project has been moved to <a href=\""+newLoc+"\"> new location </a>. You will be redirected in 5 sec.");
+                setTimeout(setLoc(newLoc), 5000);
+              }
+            }
+            function setLoc(loc){
+              window.location=loc;
+            }
+         //-->
+      </script>
 </head>
-<body onload="window.location=window.location.href.replace('infostretch.github.io/qaf','qmetry.github.io/qaf/qaf-2.1.7b')">
+<body onload="redirect();">
 </body>
 </html>
